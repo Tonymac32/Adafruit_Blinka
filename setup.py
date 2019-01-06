@@ -33,9 +33,11 @@ setup(
     # If your package is a single module, use this instead of 'packages':
     py_modules=['bitbangio', 'board', 'busio', 'digitalio', 'micropython', 'neopixel_write'],
     install_requires=[
-        'Adafruit-GPIO',
+        "Adafruit-PlatformDetect",
+        "Adafruit-PureIO",
         "RPi.GPIO; platform_machine=='armv7l' or platform_machine=='armv6l'",
-        "rpi_ws281x>=4.0.0; platform_machine=='armv7l' or platform_machine=='armv6l'"
+        "rpi_ws281x>=4.0.0; platform_machine=='armv7l' or platform_machine=='armv6l'",
+        "spidev; sys_platform=='linux'"
     ],
     license='MIT',
     classifiers=[
